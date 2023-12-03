@@ -1,0 +1,24 @@
+{% extends 'old/toyota.html' %}
+
+{% block second %}News{% endblock %}
+
+{% block first %}
+<div class="features">
+    <h1>Info</h1>
+    {% if news %}
+
+        {% for sub in news %}
+
+    <div class='alert alert-warning'>
+        <h3> {{ sub.title }} </h3>
+        <p>{{ sub.trailer }}</p>
+    </div>
+     {% endfor %}
+
+    {% else %}
+    <p>No info</p>
+    {% endif %}
+
+    {# Comments #}
+</div>
+{% endblock %}

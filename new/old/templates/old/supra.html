@@ -1,0 +1,21 @@
+{% extends 'old/toyota.html' %}
+
+{% block second %}{{ title }}{% endblock %}
+
+{% block first %}
+<div class="features">
+    <h1>{{ title }}</h1>
+    <p>This is the main page of my project</p>
+    <button class="btn btn-warning">to the page about me</button>
+
+    {% for sub in values %}
+    <p>{{ sub }}</p>
+
+    {% endfor %}
+
+    {% for sub in obj %}
+    <p>{{ sub }}</p>
+    {% endfor %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'old/toyota.html' %}
+
+{% block second %}add a new post{% endblock %}
+
+{% block first %}
+<div class="features">
+    <h1>add a new post</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Name of post" class="form-control"><br>
+        <input type="text" placeholder="Trailer of post" class="form-control"><br>
+        <textarea class="form-control" placeholder="Text"></textarea>
+        <input type="date" class="form-control"><br>
+        <input type="time" class="form-control"><br>
+        <button class="btn btn-success" type="submit">Add a new post</button>
+    </form>
+    
+</div>
+{% endblock %}
